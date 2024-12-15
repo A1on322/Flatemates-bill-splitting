@@ -1,4 +1,5 @@
 Title: Flatmates Bill Split
+Purpose: The main goal of this project is to practice OOP concepts
 Description: An app that gets as input the amount of a bill for a particular period
 and the days that each of the flatmates stayed in the house for that period
 and returns how much each flatmate has to pay. It also generates a PDF report
