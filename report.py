@@ -55,5 +55,5 @@ class PdfReport:
             pdf.cell(w=200, h=25, txt= str(flatemate.days_in_house), border=1, align='C')
             pdf.cell(w=140, h=25, txt=f'${total_to_pay:.2f}', border=1, align='C',ln=1)
 
-        pdf.output(self.filename)
-        webbrowser.open('file://' + os.path.realpath(self.filename))
+        pdf.output(f'reports/{self.filename}')
+        webbrowser.open('file://' + os.path.realpath(f'reports/{self.filename}'))
