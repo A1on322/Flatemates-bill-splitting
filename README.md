@@ -14,3 +14,7 @@ Objects: Bill:
          PdfReport:
             filename
             generate(flatmate1, flatmate2, bill)
+Features: 
+	- Improved design of output pdf file 
+	- Customizable number of flatmates
+	- Setting all customable parameters through CLI 
