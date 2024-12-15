@@ -83,12 +83,6 @@ class PdfReport:
         pdf.output(self.filename)
         webbrowser.open('file://' + os.path.realpath(self.filename))
 
-
-# bill = Bill(400, 'December 2024')
-#
-# john = Flatmate('John', 27)
-# steve = Flatmate('Steve', 15)
-# garry = Flatmate('Garry', 24)
 amount, period = int(input('Enter amount of the bill: ')), input('Enter period of the bill like \'January 2024\': ')
 bill = Bill(amount, period)
 
