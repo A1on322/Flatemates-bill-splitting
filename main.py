@@ -84,11 +84,19 @@ class PdfReport:
         webbrowser.open('file://' + os.path.realpath(self.filename))
 
 
-bill = Bill(400, 'December 2024')
+# bill = Bill(400, 'December 2024')
+#
+# john = Flatmate('John', 27)
+# steve = Flatmate('Steve', 15)
+# garry = Flatmate('Garry', 24)
+amount, period = int(input('Enter amount of the bill: ')), input('Enter period of the bill like \'January 2024\': ')
+bill = Bill(amount, period)
 
-john = Flatmate('John', 27)
-steve = Flatmate('Steve', 15)
-garry = Flatmate('Garry', 24)
+flatmates = {}
+for i in range(int(input('Enter number of flatemates: '))):
+    name = input(f'Enter name of the flatemate #{i+1}: ')
+    n_days = int(input(f'Enter number of days {name} stayed in the house: '))
+    flatmates['flatmate' + str(i+1)] = Flatmate(name, n_days)
 
 new_pdf = PdfReport(bill.period + '.pdf')
-new_pdf.generate_pdf(john,steve,garry,bill = bill)
+new_pdf.generate_pdf(*flatmates.values(),bill = bill)
